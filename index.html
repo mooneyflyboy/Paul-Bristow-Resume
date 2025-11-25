@@ -35,7 +35,7 @@
     }
     .nav-menu a:hover { color:#ffd700; transform:translateX(10px); }
 
-    /* Hero - Now fits perfectly on one screen */
+    /* Hero - Optimized to fit perfectly */
     .hero {
       min-height:100vh;
       display:flex;
@@ -43,43 +43,43 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:100px 20px 80px;
-      gap:24px;
+      padding:90px 20px 70px;
+      gap:18px;
     }
     .hero h1 {
-      font-size:clamp(3.2rem, 8vw, 5.5rem);
+      font-size:clamp(3.4rem, 8.5vw, 5.8rem);
       font-weight:800;
       background:linear-gradient(90deg,#ffd700,#4ecdc4);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
-      margin-bottom:8px;
+      margin-bottom:4px;
     }
     .tagline {
-      font-size:clamp(1.3rem, 3.5vw, 1.9rem);
+      font-size:clamp(1.25rem, 3.4vw, 1.85rem);
       opacity:0.9;
       font-weight:300;
     }
 
-    /* Compact & beautiful summary paragraph */
+    /* NEW: Ultra-compact summary — takes ~50% less vertical space */
     .summary-card {
-      max-width: 920px;
-      margin: 20px auto 0;
-      padding: 0 16px;
+      max-width: 900px;
+      margin: 12px auto 0;
+      padding: 0 12px;
     }
     .summary-card p {
-      font-size:clamp(1.08rem, 2.8vw, 1.45rem);
-      line-height:1.58;
-      background:rgba(255,215,0,0.08);
-      padding:22px 28px;
-      border-radius:26px;
-      border:1px solid rgba(255,215,0,0.25);
+      font-size:clamp(0.98rem, 2.4vw, 1.26rem);
+      line-height:1.48;
+      background:rgba(255,215,0,0.09);
+      padding:14px 20px;
+      border-radius:20px;
+      border:1px solid rgba(255,215,0,0.28);
       backdrop-filter:blur(10px);
-      box-shadow:0 12px 30px rgba(0,0,0,0.35);
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
     }
     .summary-card strong {
       display:block;
-      font-size:clamp(1.35rem, 3.8vw, 2.1rem);
-      margin-bottom:12px;
+      font-size:clamp(1.18rem, 3.2vw, 1.68rem);
+      margin-bottom:7px;
       background:linear-gradient(90deg,#ffd700,#4ecdc4);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
@@ -87,36 +87,35 @@
     }
 
     .contact {
-      display:flex; gap:32px; flex-wrap:wrap; justify-content:center;
-      font-size:clamp(1.15rem, 3vw, 1.35rem);
-      margin-top:10px;
+      display:flex; gap:28px; flex-wrap:wrap; justify-content:center;
+      font-size:clamp(1.1rem, 2.9vw, 1.32rem);
+      margin-top:8px;
     }
     .contact a { color:#ffd700; text-decoration:none; }
 
     .cta {
-      margin-top:32px;
-      padding:16px 56px;
+      margin-top:28px;
+      padding:14px 52px;
       background:rgba(255,215,0,0.25);
       border:3px solid #ffd700;
       border-radius:70px;
       color:#ffd700;
       font-weight:700;
-      font-size:clamp(1.3rem, 3.5vw, 1.6rem);
+      font-size:clamp(1.22rem, 3.3vw, 1.55rem);
       text-decoration:none;
       transition:0.5s;
     }
     .cta:hover {
-      background:#ffd700; color:#000; transform:translateY(-8px);
+      background:#ffd700; color:#000; transform:translateY(-6px);
     }
 
-    /* Rest of your sections (unchanged except minor mobile tweaks) */
+    /* Rest of sections (unchanged) */
     .section-wrapper { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:80px 20px; }
     .section-card { background:rgba(255,255,255,0.06); border-radius:40px; padding:60px 40px; width:100%;
       max-width:1300px; border:2px solid rgba(255,215,0,0.35); backdrop-filter:blur(16px); box-shadow:0 30px 80px rgba(0,0,0,0.5); }
     h2 { font-size:3.6rem; text-align:center; margin-bottom:40px; background:linear-gradient(90deg,#ffd700,#4ecdc4);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:800; }
 
-    /* Timeline - unchanged */
     .timeline-instruction { text-align:center; font-size:1.35rem; margin-bottom:50px; color:#ffd700; font-weight:500; }
     .timeline { position:relative; max-width:1000px; margin:0 auto; }
     .timeline::after { content:''; position:absolute; width:6px; background:linear-gradient(to bottom,#ffd700,#4ecdc4);
@@ -152,15 +151,14 @@
     .footer { text-align:center; padding:80px 20px 40px; font-size:1.1rem; color:rgba(255,215,0,0.7); }
 
     @media (max-width: 1024px) {
-      .hero { padding:90px 20px 70px; gap:20px; }
+      .hero { padding:80px 20px 60px; gap:16px; }
       .timeline::after { left:31px; }
       .timeline-item { width:100%; padding-left:70px; padding-right:20px; left:0 !important; }
       .timeline-item::after { left:17px; }
     }
     @media (max-width: 768px) {
-      .hero h1 { margin-bottom:4px; }
-      .summary-card p { padding:20px 24px; }
-      .cta { padding:14px 48px; }
+      .summary-card p { padding:12px 18px; }
+      .cta { padding:12px 44px; }
     }
   </style>
 </head>
@@ -168,7 +166,6 @@
 
   <div id="particles-js"></div>
 
-  <!-- Hamburger Menu -->
   <div class="menu-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
     <i class="fas fa-bars"></i>
   </div>
@@ -181,12 +178,13 @@
     <a href="#contact" onclick="document.querySelector('.nav-menu').classList.remove('active')">Contact</a>
   </nav>
 
-  <!-- Hero - Now 100% fits on screen -->
+  <!-- Hero - Now ultra-compact and fully above the fold -->
   <header class="hero" id="home">
     <div>
       <h1>PAUL BRISTOW</h1>
       <p class="tagline">Revenue Driver • Team Builder • Results Owner</p>
 
+      <!-- Compact professional summary (≈50% smaller) -->
       <div class="summary-card">
         <p>
           <strong>REVENUE DRIVER | TEAM BUILDER | RESULTS OWNER</strong>
@@ -204,8 +202,7 @@
     </div>
   </header>
 
-  <!-- All other sections remain exactly as before -->
-  <!-- Professional Experience -->
+  <!-- All other sections unchanged -->
   <div class="section-wrapper" id="experience">
     <div class="section-card">
       <h2>Professional Experience</h2>
@@ -244,9 +241,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Core Competencies, Education, Contact, Footer - unchanged -->
-  <!-- (Kept identical to your original for brevity - they are exactly the same as your last working version) -->
 
   <div class="section-wrapper" id="competencies">
     <div class="section-card">
