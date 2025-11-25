@@ -42,6 +42,35 @@
     .hero h1 { font-size:5.5rem; font-weight:800; background:linear-gradient(90deg,#ffd700,#4ecdc4);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     .tagline { font-size:1.8rem; opacity:0.9; font-weight:300; }
+
+    /* NEW: Professional Summary Card */
+    .summary-card {
+      max-width: 960px;
+      margin: 50px auto 0;
+      padding: 0 20px;
+    }
+    .summary-card p {
+      font-size: clamp(1.45rem, 4.2vw, 2.1rem);
+      line-height: 1.55;
+      font-weight: 400;
+      opacity: 0.95;
+      background: rgba(255,215,0,0.08);
+      padding: 36px 44px;
+      border-radius: 32px;
+      border: 1px solid rgba(255,215,0,0.25);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+    .summary-card strong {
+      display: block;
+      font-size: clamp(1.7rem, 5vw, 2.6rem);
+      margin-bottom: 20px;
+      background: linear-gradient(90deg,#ffd700,#4ecdc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
     .contact { display:flex; gap:40px; flex-wrap:wrap; justify-content:center; font-size:1.3rem; }
     .contact a { color:#ffd700; text-decoration:none; }
     .cta { margin-top:50px; padding:20px 70px; background:rgba(255,215,0,0.25); border:3px solid #ffd700;
@@ -76,7 +105,7 @@
     .timeline-details li { margin:12px 0; padding-left:28px; position:relative; font-size:1.15rem; }
     .timeline-details li::before { content:"•"; color:#ffd700; position:absolute; left:0; font-size:1.8rem; top:-4px; }
 
-    /* Competencies - No bullets */
+    /* Competencies */
     .competencies-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
     .comp-group { background:rgba(255,255,255,0.06); padding:40px 20px; border-radius:32px;
       border:1px solid rgba(255,215,0,0.3); text-align:center; }
@@ -106,6 +135,7 @@
       .section-card { padding:50px 25px; }
       .menu-toggle { width:50px; height:50px; font-size:1.5rem; }
       .nav-menu { width:100%; padding:140px 30px 60px; }
+      .summary-card p { padding: 28px 32px; }
     }
   </style>
 </head>
@@ -131,6 +161,15 @@
     <div>
       <h1>PAUL BRISTOW</h1>
       <p class="tagline">Revenue Driver • Team Builder • Results Owner</p>
+
+      <!-- Professional Summary Card -->
+      <div class="summary-card">
+        <p>
+          <strong>REVENUE DRIVER | TEAM BUILDER | RESULTS OWNER</strong>
+          Proven executive with a track record of building and scaling high-performance sales organizations from startup to $295M+ in revenue. Expertise in strategic leadership, sales technology integration (Salesforce, Velocify, SaaS), team expansion, and delivering exceptional CAGR and ROS growth. Passionate about renewable energy, global markets, business-to-business sales, and developing top-tier talent.
+        </p>
+      </div>
+
       <div class="contact">
         <a href="tel:469-578-0999">469-578-0999</a>
         <a href="mailto:PaulMBristow@icloud.com">PaulMBristow@icloud.com</a>
@@ -181,7 +220,7 @@
     </div>
   </div>
 
-  <!-- Core Competencies - No bullets -->
+  <!-- Core Competencies -->
   <div class="section-wrapper" id="competencies">
     <div class="section-card">
       <h2>Core Competencies</h2>
@@ -227,23 +266,23 @@
     </div>
   </div>
 
-  <!-- Contact - Email stays on ONE line on every phone -->
+  <!-- Contact -->
   <div class="section-wrapper" id="contact">
     <div class="section-card">
       <h2>Let’s Connect</h2>
       <div style="text-align:center; padding:20px;">
         <p style="margin:0;">
           <a href="mailto:PaulMBristow@icloud.com" 
-             class="big-cta"
              style="font-size:clamp(1.3rem, 5.8vw, 2.6rem); 
                     line-height:1.4;
                     white-space:nowrap;
-                    display:inline-block;">
+                    display:inline-block;
+                    color:#ffd700;
+                    text-decoration:none;">
             PaulMBristow@icloud.com
           </a>
         </p>
-        <p class="phone" 
-           style="font-size:clamp(1.5rem, 6.5vw, 2.1rem); 
+        <p style="font-size:clamp(1.5rem, 6.5vw, 2.1rem); 
                   margin-top:30px; 
                   color:#ffd700;">
           469-578-0999
@@ -259,7 +298,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    particlesJS("particles-js", { particles: { number: { value: 90 }, color: { value: "#ffd700" }, opacity: { value: 0.5 }, size: { value: 3 }, move: { speed: 1.8 } }, interactivity: { events: { onhover: { enable: true, mode: "repulse" } } } });
+    particlesJS("particles-js", { 
+      particles: { 
+        number: { value: 90 }, 
+        color: { value: "#ffd700" }, 
+        opacity: { value: 0.5 }, 
+        size: { value: 3 }, 
+        move: { speed: 1.8 } 
+      }, 
+      interactivity: { 
+        events: { onhover: { enable: true, mode: "repulse" } } 
+      } 
+    });
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
